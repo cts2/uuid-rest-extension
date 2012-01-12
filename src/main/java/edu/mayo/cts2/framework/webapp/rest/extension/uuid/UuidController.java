@@ -30,18 +30,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import edu.mayo.cts2.framework.webapp.rest.extensions.controller.ControllerProvider;
+
 /**
  * The Class UuidController.
  * 
  * @author <a href="mailto:kevin.peterson@mayo.edu">Kevin Peterson</a>
  */
-@Controller
-public class UuidController {
+@Controller("uuidControllerProvider")
+public class UuidController implements ControllerProvider {
 
 	@RequestMapping(value = { "/uuid" }, method = RequestMethod.GET)
 	@ResponseBody
 	public String getUUID() {
 		return UUID.randomUUID().toString();
+	}
+
+	@Override
+	public Object getController() {
+		return this;
 	}
 	
 }
