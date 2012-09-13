@@ -4,7 +4,7 @@
 
 	<groupId>edu.mayo.cts2.framework</groupId>
 	<artifactId>uuid-rest-extension</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>bundle</packaging>
 
 	<developers>
@@ -25,7 +25,7 @@
 	</scm>
 
 	<properties>
-		<develpment.framework.version>0.4.9-SNAPSHOT</develpment.framework.version>
+		<develpment.framework.version>0.7.2</develpment.framework.version>
 	</properties>
 
 	<pluginRepositories>
